@@ -56,7 +56,7 @@ namespace Examen2
             }
         }
 
-        public static implicit operator tipo(Usuarios v)
+        public static implicit operator tipo(UsuariosID v)
         {
             throw new NotImplementedException();
         }

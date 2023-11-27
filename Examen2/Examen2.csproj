@@ -69,19 +69,35 @@
   <ItemGroup>
     <Content Include="BD\base de datos exmen 2.sql" />
     <Content Include="css\GridviewDiseno.css" />
+    <Content Include="DetallesdeReparacion.aspx" />
+    <Content Include="Reparaciones.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="css\Estilo.css" />
     <Content Include="Equipos.aspx" />
     <Content Include="Tecnicos.aspx" />
     <Content Include="Web.config" />
     <Content Include="principal.aspx" />
+    <Content Include="Asignaciones.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\DBconn.cs" />
     <Compile Include="Clases\Equipos.cs" />
     <Compile Include="Clases\Tecnicos.cs" />
-    <Compile Include="Clases\tipo.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="DetallesdeReparacion.aspx.cs">
+      <DependentUpon>DetallesdeReparacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesdeReparacion.aspx.designer.cs">
+      <DependentUpon>DetallesdeReparacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reparaciones.aspx.cs">
+      <DependentUpon>Reparaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reparaciones.aspx.designer.cs">
+      <DependentUpon>Reparaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -125,6 +141,13 @@
     <Compile Include="principal.aspx.designer.cs">
       <DependentUpon>principal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Asignaciones.aspx.cs">
+      <DependentUpon>Asignaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignaciones.aspx.designer.cs">
+      <DependentUpon>Asignaciones.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -137,7 +160,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Imagen\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

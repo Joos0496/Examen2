@@ -32,7 +32,7 @@
         <asp:Button ID="Button1" class="btn btn-outline-primary" runat="server" Text="Agregar" />
         <asp:Button ID="Button2" class="btn btn-outline-secondary" runat="server" Text="Borrar" />
         <asp:Button ID="Bconsulta" runat="server" class="btn btn-outline-danger" Text="Consultarconfiltro" />
-        <asp:Button ID="Button3" class="btn btn-outline-secondary" runat="server" Text="Modificar"  />
+        <asp:Button ID="Button3" class="btn btn-outline-secondary" runat="server" Text="Modificar" OnClick="Button3_Click1"  />
 
     </div>
 </asp:Content>

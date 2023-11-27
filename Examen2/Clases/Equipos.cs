@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Configuration;
 
 namespace Examen2.Clases
 {
@@ -117,7 +118,7 @@ namespace Examen2.Clases
                     {
                         while (reader.Read())
                         {
-                            tipo tipo = new Usuarios(reader.GetInt32(0), reader.GetString(1));  // instancia
+                            tipo tipo = new UsuariosID(reader.GetInt32(0), reader.GetString(1));  // instancia
                             tipos.Add(tipo);
 
                         }
@@ -137,6 +138,39 @@ namespace Examen2.Clases
             }
 
             return tipos;
+        }
+        public static int Modificar(int Usuarios, string Nombre, string CorreoEle, string Telefono)
+        {
+            int retorno = 0;
+
+            SqlConnection Conn = new SqlConnection();
+            try
+            {
+                using (Conn = DBconn.obtenerconexion())
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE Usuarios SET Nombre = @Nombre, CorreoElectronico = @CorreoElectronico, Telefono = @Telefono WHERE UsuarioID = @UsuarioID", Conn)
+                    {
+                        CommandType = CommandType.Text
+                    };
+                    cmd.Parameters.Add(new SqlParameter("@UsuarioID", Usuarios));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre", Nombre));
+                    cmd.Parameters.Add(new SqlParameter("@CorreoElectronico", CorreoEle));
+                    cmd.Parameters.Add(new SqlParameter("@Telefono", Telefono));
+
+                    retorno = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                retorno = -1;
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return retorno;
+
         }
     }
 }

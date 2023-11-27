@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/menu.Master" AutoEventWireup="true" CodeBehind="Equipos.aspx.cs" Inherits="Examen2.Equipos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/menu.Master" AutoEventWireup="true" CodeBehind="Reparaciones.aspx.cs" Inherits="Examen2.Reparaciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container text-center">
-    <h1> Equipos <h1>
+            <div class="container text-center">
+    <h1> Reparaciones <h1>
 <div>
 
         <div>
@@ -18,12 +18,13 @@
     <br />
 
 </div>
-        </div>
+
+            </div>
      <div class="container text-center">
-    Tipo de Equipo: <asp:TextBox ID="tipoequi" class="form-control" runat="server"></asp:TextBox>
+    Reparaciones: <asp:TextBox ID="Reparaciones" class="form-control" runat="server"></asp:TextBox>
     Equipos: <asp:TextBox ID="Equipos" class="form-control" runat="server"></asp:TextBox>
-    Modelo: <asp:TextBox ID="modelo" class="form-control" runat="server"></asp:TextBox>
-    Usuario: <asp:TextBox ID="Usuario" class="form-control" runat="server"></asp:TextBox>
+    fechasolicitud: <asp:TextBox ID="fecha" class="form-control" runat="server"></asp:TextBox>
+    Estado: <asp:TextBox ID="Estado" class="form-control" runat="server"></asp:TextBox>
 </div>
 <div class="container text-center">
     <asp:Button ID="Button1" class="btn btn-outline-primary" runat="server" Text="Agregar" />
@@ -32,5 +33,4 @@
     <asp:Button ID="Button3" class="btn btn-outline-secondary" runat="server" Text="Modificar"  />
 
 </div>
-       
 </asp:Content>

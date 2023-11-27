@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="menu.Master.cs" Inherits="Examen2.Site1" %>
-
-<!DOCTYPE html>
-
+<html>
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -23,6 +21,9 @@
       <li class="menu__group"><a href="Usuarios.aspx" class="menu__link r-link text-underlined">Usuarios</a></li>
       <li class="menu__group"><a href="Tecnicos.aspx" class="menu__link r-link text-underlined">Tecnicos</a></li>
       <li class="menu__group"><a href="Equipos.aspx" class="menu__link r-link text-underlined">Equipos</a></li>
+      <li class="menu__group"><a href="Asignaciones.aspx" class="menu__link r-link text-underlined">Asignaciones</a></li>
+      <li class="menu__group"><a href="Reparaciones.aspx" class="menu__link r-link text-underlined">Reparaciones</a></li>
+       <li class="menu__group"><a href="Detallesdereparacion.aspx" class="menu__link r-link text-underlined">DetallesReparaciones</a></li>
     </ul>
   </nav>
 </div>
